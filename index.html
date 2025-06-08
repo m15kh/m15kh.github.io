@@ -9,8 +9,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -36,21 +36,21 @@
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="img/profile/me2.jpg" alt="" class="img-fluid rounded-circle">
+      <img src="assets/img/profile/me.jpg" alt="" class="img-fluid rounded-circle">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="{assets/img/logo.png" alt="">-->
+      <!-- <img src="{assets/assets/img/logo.png" alt="">-->
       <h1 class="sitename">Mohammad Khalili</h1>
     </a>
 
     <div class="social-links text-center">
         <a href="https://github.com/m15kh" class="github" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
-        <a href="https://join.skype.com/invite/KzV8clE6tdfh"  target="_blank" class="google-plus"><i class="bi bi-skype"></i></a>
+		    <a href="https://t.me/m15khh" class="telegram" target="_blank" rel="noopener noreferrer"><i class="bi bi-telegram"></i></a>
         <a href="https://www.linkedin.com/in/m15kh/" class="linkedin" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
-		<a href="https://t.me/m15khh" class="telegram" target="_blank" rel="noopener noreferrer"><i class="bi bi-telegram"></i></a>
-		  
+        <a href="https://twitter.com/m15khh" class="twitter" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://medium.com/@mohammadkhalili" class="medium" target="_blank" rel="noopener noreferrer"><i class="bi bi-medium"></i></a>
     </div>
 
     <nav id="navmenu" class="navmenu">
@@ -77,7 +77,7 @@
   <!-- Hero Section -->
   <section id="hero" class="hero section dark-background">
 
-    <img src="img/me_back.jpg" alt="" data-aos="fade-in" class="">   <!--  #big photo for back ground -->
+    <img src="assets/img/me_back.jpg" alt="" data-aos="fade-in" class="">   <!--  #big photo for back ground -->
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <h2>Mhammad Khalili</h2>
@@ -103,7 +103,7 @@
     
           <div class="row gy-4 justify-content-center">
             <div class="col-lg-4">
-              <img src="img/profile/me2.jpg" class="img-fluid" alt="">
+              <img src="assets/img/profile/me.jpg" class="img-fluid" alt="">
             </div>
             <div class="col-lg-8 content">
               <h4>Artificial Intelligence Engineer  with experience in hardware integration </h4>
@@ -194,6 +194,8 @@
                           <li><i class="bi bi-check-circle"></i> TensorFlow</li>
                           <li><i class="bi bi-check-circle"></i> Scikit-learn</li>
                           <li><i class="bi bi-check-circle"></i> C++</li>
+                          <li><i class="bi bi-check-circle"></i> Triton</li>
+
                           <li><i class="bi bi-check-circle"></i> CUDA Programming</li>
                           <li><i class="bi bi-check-circle"></i> Hugging Face</li>
                           <li><i class="bi bi-check-circle"></i> Transformers</li>
@@ -229,6 +231,27 @@
               .skills-list ul li i {
                   color: #0563bb;
                   margin-right: 10px;
+              }
+              
+              /* Fix for video size in portfolio */
+              .portfolio-content video {
+                  width: 100%;
+                  height: 300px;
+                  object-fit: cover;
+              }
+              
+              /* Fix for image size in portfolio to ensure consistent dimensions */
+              .portfolio-content img {
+                  width: 100%;
+                  height: 300px;
+                  object-fit: cover;
+              }
+              
+              /* Ensure lightbox displays full image */
+              .glightbox-container img {
+                  height: auto !important;
+                  max-height: 90vh !important;
+                  object-fit: contain !important;
               }
           </style>
     
@@ -384,7 +407,6 @@
               <li>Implemented fingerprint recognition systems for enhanced security and user identification.</li>
               <li>Developed and integrated object counting solutions for industrial applications to track and manage production lines.</li>
               <li>Worked on SAM (Segment Anything Model) for advanced image segmentation tasks.</li>
-              </ul>
             </div>
               </script>
 
@@ -401,7 +423,7 @@
     
     </section><!-- /Resume Section -->
 
-    <!-- Portfolio Section -->
+   
 
     <section id="portfolio" class="portfolio section light-background">
     
@@ -426,24 +448,30 @@
             
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
               <div class="portfolio-content h-100">
-                <img src="img/counter/11.png" class="img-fluid" alt="">
+                <video controls class="img-fluid">
+                  <source src="assets/video/counter/counter.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
                 <div class="portfolio-info">
                   <h4>count objects</h4>
                   <p>count objects with yolo </p>
-                  <a href="img/counter/11.png" title="count objects with yolo" data-gallery="portfolio-gallery-ai" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                  <a href="assets/video/counter/counter.mp4" title="count objects with yolo" data-gallery="portfolio-gallery-ai" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
               <div class="portfolio-content h-100">
-                <img src="img/voice/11.png" class="img-fluid" alt="">
+                <video controls class="img-fluid">
+                  <source src="assets/video/voice/voice.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
                 <div class="portfolio-info">
-                  <h4>componemt  Detection</h4>
-                  <p>Detect special  sounds in voice</p>
-                  <a href="img/voice/11.png" title="Detect intact sounds in voice" data-gallery="portfolio-gallery-ai" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                  <h4>Component Detection</h4>
+                  <p>Detect special sounds in voice</p>
+                  <a href="assets/video/voice/voice.mp4" title="Detect special sounds in voice" data-gallery="portfolio-gallery-ai" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -451,46 +479,49 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
               <div class="portfolio-content h-100">
-                <img src="img/fingerprint/fingerprint.png" class="img-fluid" alt="">
+                <img src="assets/img/fingerprint/fingerprint.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>identification fingerprint</h4>
                   <p>find latent fingerprint from database for find crime </p>
-                  <a href="img/fingerprint/fingerprint.png" title="identification fingerprint" data-gallery="portfolio-gallery-ai" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                  <a href="assets/img/fingerprint/fingerprint.png" title="identification fingerprint" data-gallery="portfolio-gallery-ai" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
               <div class="portfolio-content h-100">
-                <img src="img/eyebrow-remover/eyebrow.jpg" class="img-fluid" alt="">
+                <img src="assets/img/eyebrow-remover/eyebrow.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>identification fingerprint</h4>
                     <p>Remove eyebrow with SAM and diffusion model</p>
-                    <a href="img/eyebrow-remover/eyebrow.jpg" title="Eyebrow Remover" data-gallery="portfolio-gallery-ai" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                    <a href="assets/img/eyebrow-remover/eyebrow.jpg" title="Eyebrow Remover" data-gallery="portfolio-gallery-ai" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
 
               </div>
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
               <div class="portfolio-content h-100">
-                <img src="img/3d-reconstruction/3d.jpg" class="img-fluid" alt="">
+                <video controls class="img-fluid">
+                  <source src="assets/video/3d/3d.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
                 <div class="portfolio-info">
                     <h4>3D Point Reconstruction</h4>
                     <p>Identify and reconstruct missing parts in 3D files (OBJ) to fix holes and improve model integrity.</p>
-                  <a href="img/3d-reconstruction/3d.jpg" title="3D Point Reconstruction" data-gallery="portfolio-gallery-ai" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                  <a href="assets/video/3d/3d.mp4" title="3D Point Reconstruction" data-gallery="portfolio-gallery-ai" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
     
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-backend">
               <div class="portfolio-content h-100">
-                <img src="img/barber/11.png" class="img-fluid" alt="">
+                <img src="assets/img/barber/barber.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>appointment Barber</h4>
                   <p>appointment Barber</p>
-                  <a href="img/barber/11.png" title="appointment Barber" data-gallery="portfolio-gallery-backend" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/barber/barber.png" title="appointment Barber" data-gallery="portfolio-gallery-backend" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="https://github.com/m15kh/booking_calender" target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -498,11 +529,11 @@
     
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-iot">
               <div class="portfolio-content h-100">
-                <img src="img/iot/11.png" class="img-fluid" alt="">
+                <img src="assets/img/iot/iot.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>IOT project</h4>
                   <p>IOT project</p>
-                  <a href="img/iot/11.png" title="IOT project" data-gallery="portfolio-gallery-iot" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="assets/img/iot/iot.png" title="IOT project" data-gallery="portfolio-gallery-iot" class="glightbox preview-link" data-dimension="1024x768"><i class="bi bi-zoom-in"></i></a>
                   <a href="https://github.com/m15kh/iot" target="_blank"  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -512,35 +543,69 @@
     
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
               <div class="portfolio-content h-100">
-                <img src="img/face/11.png" class="img-fluid" alt="">
+                <img src="assets/img/face/11.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>face detection</h4>
                   <p>face detection with siamese network</p>
-                  <a href="img/face/11.png" title="face detection with siamese network" data-gallery="portfolio-gallery-ai" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/face/11.png" title="face detection with siamese network" data-gallery="portfolio-gallery-ai" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
     
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-backend">
               <div class="portfolio-content h-100">
-                <img src="img/blog/11.png" class="img-fluid" alt="">
+                <img src="assets/img/blog/blog.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>simple blog </h4>
                   <p>simple blog </p>
-                  <a href="img/blog/11.png" title="simple blog " data-gallery="portfolio-gallery-backend" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/blog/blog.png" title="simple blog " data-gallery="portfolio-gallery-backend" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="https://github.com/m15kh/blog_site2" target="_blank" title="More Details" class="details-link" ><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
     
-    
-          
-    
-          
-    
-    
-         
-    
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
+              <div class="portfolio-content h-100">
+                <video controls class="img-fluid">
+                  <source src="assets/video/tts/tts.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="portfolio-info">
+                  <h4>TTS Project</h4>
+                  <p>Implementation of TTS , focusing on Arabic accent</p>
+                    <a href="assets/video/tts/tts.mp4" title="TTS Project Implementation - Accents: Egypt, Saudi, and Levantine" data-gallery="portfolio-gallery-ai" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a  target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+            
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
+              <div class="portfolio-content h-100">
+                <video controls class="img-fluid">
+                  <source src="assets/video/instagram/short_video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="portfolio-info">
+                  <h4>Automatic Video Editor</h4>
+                  <p>AI-powered tool that automatically crops videos, detects important scenes, and adds subtitles</p>
+                  <a href="assets/video/instagram/short_video.mp4" title="Automatic Video Editor" data-gallery="portfolio-gallery-ai" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a  target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/segment_finger/segment_finger.png" class="img-fluid" alt="Palm photo segmentation">
+                <div class="portfolio-info">
+                  <h4>Palm Photo Segmentation</h4>
+                  <p>Training palm photo segmentation with different approaches: UNet, SynDiff, DeepLabv3, and patch-based techniques</p>
+                  <a href="assets/img/segment_finger/segment_finger.png" title="Palm Photo Segmentation Techniques" data-gallery="portfolio-gallery-ai" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a  target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
           </div><!-- End Portfolio Container -->
     
         </div>
