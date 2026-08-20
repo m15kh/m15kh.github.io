@@ -1155,6 +1155,28 @@ section,
   width: 100%;
 }
 
+.portfolio-details .project-media {
+  width: 100%;
+  max-height: 620px;
+  object-fit: contain;
+  display: block;
+  background: #040b14;
+  border-radius: 4px;
+}
+
+.portfolio-details .portfolio-info ul li {
+  line-height: 1.6;
+}
+
+.portfolio-details .project-features {
+  padding-left: 20px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.portfolio-details .project-features li {
+  margin-bottom: 10px;
+}
+
 .portfolio-details .portfolio-details-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
