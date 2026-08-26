@@ -226,4 +226,49 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Startup coming soon dialog
+   */
+  const startupCard = document.querySelector('#startup-card');
+  const comingSoonDialog = document.querySelector('#coming-soon-dialog');
+  let dialogLastFocus = null;
+
+  function setDialog(open) {
+    if (!comingSoonDialog) return;
+    comingSoonDialog.classList.toggle('is-open', open);
+    comingSoonDialog.setAttribute('aria-hidden', String(!open));
+    document.body.classList.toggle('dialog-open', open);
+
+    if (open) {
+      dialogLastFocus = document.activeElement;
+      comingSoonDialog.querySelector('.dialog-close')?.focus();
+    } else if (dialogLastFocus) {
+      dialogLastFocus.focus();
+    }
+  }
+
+  startupCard?.addEventListener('click', () => setDialog(true));
+  comingSoonDialog?.querySelectorAll('[data-dialog-close]').forEach((control) => {
+    control.addEventListener('click', () => setDialog(false));
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && comingSoonDialog?.classList.contains('is-open')) {
+      setDialog(false);
+    }
+  });
+
+  /**
+   * Lightweight reading progress indicator
+   */
+  const progressBar = document.querySelector('.scroll-progress span');
+  function updateScrollProgress() {
+    if (!progressBar) return;
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+    progressBar.style.width = `${Math.min(progress, 100)}%`;
+  }
+  window.addEventListener('load', updateScrollProgress);
+  document.addEventListener('scroll', updateScrollProgress, { passive: true });
+
 })();
