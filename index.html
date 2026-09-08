@@ -365,19 +365,26 @@
       </div>
 
       <div class="container" data-aos="zoom-in" data-aos-delay="100">
-        <button class="startup-card" id="startup-card" type="button" aria-haspopup="dialog" aria-controls="coming-soon-dialog">
-          <span class="startup-orbit startup-orbit-one" aria-hidden="true"></span>
-          <span class="startup-orbit startup-orbit-two" aria-hidden="true"></span>
-          <span class="startup-card-content">
-            <span class="startup-icon"><i class="bi bi-rocket-takeoff" aria-hidden="true"></i></span>
-            <span class="startup-copy">
-              <span class="startup-eyebrow"><span></span> In development</span>
-              <strong>Something intelligent is coming.</strong>
-              <small>Curious? Tap for a little preview.</small>
-            </span>
-            <span class="startup-action">Explore <i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
-          </span>
-        </button>
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="startup-card">
+              <span class="startup-orbit startup-orbit-one" aria-hidden="true"></span>
+              <span class="startup-orbit startup-orbit-two" aria-hidden="true"></span>
+              <a class="startup-media glightbox" href="assets/video/mvp/daybit.mp4" data-gallery="startup-preview" aria-label="Watch a short preview">
+                <img src="assets/img/posters/daybit.jpg" class="img-fluid" alt="" loading="lazy">
+                <span class="video-play-btn" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+              </a>
+              <span class="startup-card-content">
+                <span class="startup-copy">
+                  <span class="startup-eyebrow"><span></span> In development</span>
+                  <strong>Something intelligent is coming.</strong>
+                  <small>Curious? Tap the preview for a little look.</small>
+                </span>
+                <button class="startup-action" id="startup-explore" type="button" aria-haspopup="dialog" aria-controls="coming-soon-dialog">Explore <i class="bi bi-arrow-up-right" aria-hidden="true"></i></button>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -408,10 +415,10 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai" data-aos="fade-up" data-aos-delay="200">
               <div class="portfolio-content h-100">
-                <video controls class="img-fluid" preload="metadata">
-                  <source src="assets/video/counter/counter.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+                <div class="video-poster" data-src="assets/video/counter/counter.mp4">
+                  <img src="assets/img/posters/counter.jpg" class="img-fluid" alt="Object counting with YOLO preview" loading="lazy">
+                  <span class="video-play-btn" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+                </div>
                 <div class="portfolio-info">
                   <h4>count objects</h4>
                   <p>count objects with yolo </p>
@@ -423,10 +430,10 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai" data-aos="fade-up" data-aos-delay="200">
               <div class="portfolio-content h-100">
-                <video controls class="img-fluid" preload="metadata">
-                  <source src="assets/video/voice/voice.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+                <div class="video-poster" data-src="assets/video/voice/voice.mp4">
+                  <img src="assets/img/posters/voice.jpg" class="img-fluid" alt="Audio component detection preview" loading="lazy">
+                  <span class="video-play-btn" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+                </div>
                 <div class="portfolio-info">
                   <h4>Component Detection</h4>
                   <p>Detect special sounds in voice</p>
@@ -450,10 +457,10 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai" data-aos="fade-up" data-aos-delay="200">
               <div class="portfolio-content h-100">
-                <video controls class="img-fluid" preload="metadata">
-                  <source src="assets/video/3d/3d.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+                <div class="video-poster" data-src="assets/video/3d/3d.mp4">
+                  <img src="assets/img/posters/3d.jpg" class="img-fluid" alt="3D point reconstruction preview" loading="lazy">
+                  <span class="video-play-btn" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+                </div>
                 <div class="portfolio-info">
                   <h4>3D Point Reconstruction</h4>
                   <p>Identify and reconstruct missing parts in 3D files (OBJ) to fix holes and improve model integrity.</p>
@@ -477,10 +484,10 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai" data-aos="fade-up" data-aos-delay="200">
               <div class="portfolio-content h-100">
-                <video controls class="img-fluid" preload="metadata">
-                  <source src="assets/video/Voice_IOT/demo.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+                <div class="video-poster" data-src="assets/video/Voice_IOT/demo.mp4">
+                  <img src="assets/img/posters/voice-iot-demo.jpg" class="img-fluid" alt="Smart home voice control preview" loading="lazy">
+                  <span class="video-play-btn" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+                </div>
                 <div class="portfolio-info">
                   <h4>Smart Home Voice Control</h4>
                   <p>Smart lamp and temperature control system using Raspberry Pi 4, Arduino Nano, Whisper, LLM, and VLM</p>
@@ -518,10 +525,10 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai" data-aos="fade-up" data-aos-delay="200">
               <div class="portfolio-content h-100">
-                <video controls class="img-fluid" preload="metadata">
-                  <source src="assets/video/tts/tts.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+                <div class="video-poster" data-src="assets/video/tts/tts.mp4">
+                  <img src="assets/img/posters/tts.jpg" class="img-fluid" alt="Arabic TTS project preview" loading="lazy">
+                  <span class="video-play-btn" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+                </div>
                 <div class="portfolio-info">
                   <h4>TTS Project</h4>
                   <p>Implementation of TTS , focusing on Arabic accent</p>
@@ -533,10 +540,10 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai" data-aos="fade-up" data-aos-delay="200">
               <div class="portfolio-content h-100">
-                <video controls class="img-fluid" preload="metadata">
-                  <source src="assets/video/instagram/short_video.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+                <div class="video-poster" data-src="assets/video/instagram/short_video.mp4">
+                  <img src="assets/img/posters/instagram-short.jpg" class="img-fluid" alt="Social media video generator preview" loading="lazy">
+                  <span class="video-play-btn" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+                </div>
                 <div class="portfolio-info">
                   <h4>Social Media Video Generator</h4>
                   <p>AI-powered tool that automatically creates optimized short videos for YouTube, Instagram, and similar platforms by cropping content, detecting key scenes, and adding subtitles</p>
@@ -560,11 +567,10 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai" data-aos="fade-up" data-aos-delay="200">
             <div class="portfolio-content h-100">
-            <video controls class="img-fluid" preload="metadata"
-                  poster="assets/video/webot_robot/nao.png">
-              <source src="assets/video/webot_robot/nao.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+            <div class="video-poster" data-src="assets/video/webot_robot/nao.mp4">
+              <img src="assets/video/webot_robot/nao.png" class="img-fluid" alt="NAO robot motion control preview" loading="lazy">
+              <span class="video-play-btn" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+            </div>
 
               <div class="portfolio-info">
                 <h4>NAO Robot Motion Control</h4>
@@ -577,10 +583,10 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai" data-aos="fade-up" data-aos-delay="200">
             <div class="portfolio-content h-100">
-            <video controls class="img-fluid" preload="metadata" poster="assets/video/go2/go2.png">
-              <source src="assets/video/go2/go.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+            <div class="video-poster" data-src="assets/video/go2/go.mp4">
+              <img src="assets/video/go2/go2.png" class="img-fluid" alt="Robot control by RL and LLM preview" loading="lazy">
+              <span class="video-play-btn" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+            </div>
             <div class="portfolio-info">
               <h4>Control Robot by RL and LLM</h4>
                 <p>Reinforcement Learning and Large Language Model integration for robot control, added with MCP server</p>
@@ -606,10 +612,10 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai" data-aos="fade-up" data-aos-delay="200">
               <div class="portfolio-content h-100">
-              <video controls class="img-fluid" preload="metadata" poster="assets/video/AgenticSocial/social.jpg">
-                  <source src="assets/video/AgenticSocial/social.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+              <div class="video-poster" data-src="assets/video/AgenticSocial/social.mp4">
+                  <img src="assets/video/AgenticSocial/social.jpg" class="img-fluid" alt="AgenticSocial preview" loading="lazy">
+                  <span class="video-play-btn" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+                </div>
                 <div class="portfolio-info">
                   <h4>AgenticSocial</h4>
                   <p>AI-powered content summarization and social media message generator using CrewAI agents, LitServe, and MCP server.</p>
@@ -727,6 +733,29 @@
         ['loadedmetadata','loadeddata','canplay'].forEach(function (ev) {
           v.addEventListener(ev, function () { iso.layout(); }, { once: true });
         });
+      });
+
+      // click-to-load videos: don't fetch any video until the poster is clicked
+      grid.querySelectorAll('.video-poster').forEach(function (poster) {
+        poster.addEventListener('click', function () {
+          const src = poster.getAttribute('data-src');
+          if (!src) return;
+          const video = document.createElement('video');
+          video.className = 'img-fluid';
+          video.setAttribute('controls', '');
+          video.setAttribute('autoplay', '');
+          video.setAttribute('playsinline', '');
+          const source = document.createElement('source');
+          source.src = src;
+          source.type = 'video/mp4';
+          video.appendChild(source);
+          poster.replaceWith(video);
+          video.play().catch(function () {});
+          iso.layout();
+          ['loadedmetadata', 'loadeddata', 'canplay'].forEach(function (ev) {
+            video.addEventListener(ev, function () { iso.layout(); }, { once: true });
+          });
+        }, { once: true });
       });
 
       // filter buttons with simple fade animation

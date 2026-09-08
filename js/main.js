@@ -229,7 +229,7 @@
   /**
    * Startup coming soon dialog
    */
-  const startupCard = document.querySelector('#startup-card');
+  const startupCard = document.querySelector('#startup-explore');
   const comingSoonDialog = document.querySelector('#coming-soon-dialog');
   let dialogLastFocus = null;
 

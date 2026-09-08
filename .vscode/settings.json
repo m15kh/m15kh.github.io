@@ -10,6 +10,8 @@
         "activityBarTop.activeBackground": "#ea503a",
         "activityBarTop.background": "#ea503a",
         "activityBarTop.foreground": "#e7e7e7",
-        "activityBarTop.inactiveForeground": "#e7e7e799"
+        "activityBarTop.inactiveForeground": "#e7e7e799",
+        "activityBar.activeBorder": "#e7e7e7",
+        "activityBarTop.activeBorder": "#e7e7e7"
     }
 }
