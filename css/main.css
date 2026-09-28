@@ -1900,6 +1900,12 @@ body {
   font-size: 14px;
 }
 
+.startup-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .startup-action {
   display: inline-flex;
   align-items: center;
@@ -1915,6 +1921,11 @@ body {
   font-family: inherit;
   font-size: 15px;
   line-height: normal;
+}
+
+.startup-action:hover {
+  color: var(--accent-color);
+  border-color: rgba(108, 92, 231, 0.3);
 }
 
 .startup-action:focus-visible {
@@ -1956,112 +1967,6 @@ body {
   70%, 100% { box-shadow: 0 0 0 10px rgba(139, 107, 255, 0); }
 }
 
-/* Coming soon dialog */
-.coming-soon-dialog {
-  position: fixed;
-  inset: 0;
-  z-index: 100000;
-  display: grid;
-  visibility: hidden;
-  place-items: center;
-  padding: 20px;
-  opacity: 0;
-  transition: visibility 0.3s, opacity 0.3s ease;
-}
-
-.coming-soon-dialog.is-open {
-  visibility: visible;
-  opacity: 1;
-}
-
-.coming-soon-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(5, 9, 22, 0.72);
-  backdrop-filter: blur(10px);
-}
-
-.coming-soon-panel {
-  position: relative;
-  width: min(100%, 500px);
-  padding: 50px 42px 42px;
-  overflow: hidden;
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 30px;
-  background:
-    radial-gradient(circle at 85% 5%, rgba(108, 99, 255, 0.25), transparent 14rem),
-    #10182d;
-  box-shadow: 0 35px 100px rgba(0, 0, 0, 0.45);
-  transform: translateY(24px) scale(0.96);
-  transition: transform 0.4s cubic-bezier(.2, .8, .2, 1);
-}
-
-.coming-soon-dialog.is-open .coming-soon-panel {
-  transform: translateY(0) scale(1);
-}
-
-.dialog-close {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  display: grid;
-  width: 38px;
-  height: 38px;
-  place-items: center;
-  color: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.dialog-icon {
-  display: grid;
-  width: 72px;
-  height: 72px;
-  margin: 0 auto 20px;
-  place-items: center;
-  color: #ffffff;
-  font-size: 30px;
-  border-radius: 22px;
-  background: var(--accent-color);
-  box-shadow: 0 16px 38px rgba(139, 107, 255, 0.30);
-}
-
-.dialog-kicker {
-  color: #b6a6ff;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
-}
-
-.coming-soon-panel h2 {
-  margin: 8px 0 14px;
-  color: #ffffff;
-  font-size: clamp(36px, 8vw, 52px);
-  letter-spacing: -1.5px;
-}
-
-.coming-soon-panel p {
-  margin-bottom: 26px;
-  color: rgba(255, 255, 255, 0.64);
-}
-
-.dialog-button {
-  padding: 12px 26px;
-  color: #ffffff;
-  font-weight: 600;
-  border: 0;
-  border-radius: 100px;
-  background: var(--accent-color);
-  box-shadow: 0 10px 28px rgba(139, 107, 255, 0.28);
-}
-
-body.dialog-open {
-  overflow: hidden;
-}
-
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -2100,12 +2005,15 @@ body.dialog-open {
     padding: 28px 24px;
   }
 
+  .startup-links {
+    width: 100%;
+  }
+
   .startup-action {
     width: 100%;
     justify-content: center;
   }
 
-  .coming-soon-panel { padding: 46px 25px 32px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
